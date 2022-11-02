@@ -71,29 +71,26 @@ export default function App() {
   // render
 
     return (
-        <LinearGradient colors={
-                [Colors.primary600, Colors.secondary500]
-            }
-            style={
-                styles.rootScreen
-        }>
-            <ImageBackground source={
-                    require('./assets/images/backgroundImage.jpg')
-                }
-                resizeMode='cover'
-                imageStyle={styles.backgroundImage}
-                style={
-                    styles.rootScreen
-            }>
-            {
-
-            }
-            <SafeAreaView style={styles.screens}>
-              {screen}
-            </SafeAreaView>
-            
+        <>
+          <StatusBar backgroundColor={Colors.primary600} barStyle='light-content' />
+          <LinearGradient 
+            colors={[Colors.primary600, Colors.secondary500]}
+            style={styles.rootScreen}
+          >
+            <ImageBackground 
+              source={require('./assets/images/backgroundImage.jpg')}
+              resizeMode='cover'
+              imageStyle={styles.backgroundImage}
+              style={styles.rootScreen}
+            >
+              <SafeAreaView style={styles.screens}>
+                {screen}
+              </SafeAreaView>
             </ImageBackground>
-        </LinearGradient>
+          </LinearGradient>
+
+        </>
+ 
 
     );
 }
